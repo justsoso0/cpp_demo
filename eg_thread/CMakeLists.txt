@@ -1,8 +1,8 @@
 
 
 
-add_executable(main main.cpp)
-target_link_libraries(main pthread)
+add_executable(thread main.cpp)
+target_link_libraries(thread pthread)
 
 
 
