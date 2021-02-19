@@ -19,6 +19,28 @@ const char *test(const char *str, const int num)
     return str;
 }
 
+class const_test
+{
+public:
+    const_test(int a)
+    {
+        num = a;
+    }
+    const int set_value(int a_)
+    {
+        num = a_;
+        return num;
+    }
+    int get_value() const
+    {
+        // num = 10;  //const在函数后面代表该函数不能修改成员内容
+        return num;
+    }
+
+private:
+    int num;
+};
+
 int main()
 {
     //不可修改常量
@@ -81,14 +103,19 @@ int main()
     // const char *ret_str = test(para_str, num);
     // std::cout << "ret_str:" << ret_str << std::endl;
 
-    char *p1 = "abc";
-    char *p2 = "abc";
-    const char *p3 = "abc";
-    const char *p4 = "abc";
+    // char *p1 = "abc";
+    // char *p2 = "abc";
+    // const char *p3 = "abc";
+    // const char *p4 = "abc";
 
-    std::cout << "p1:" << &p1[0] << std::endl;
-    std::cout << "p2:" << &p2[0] << std::endl;
-    std::cout << "p3:" << &p3[0] << std::endl;
-    std::cout << "p4:" << &p4[0] << std::endl;
+    // std::cout << "p1:" << &p1[0] << std::endl;
+    // std::cout << "p2:" << &p2[0] << std::endl;
+    // std::cout << "p3:" << &p3[0] << std::endl;
+    // std::cout << "p4:" << &p4[0] << std::endl;
+
+    const_test test(1);
+    std::cout << "test value:" << test.get_value() << std::endl;
+    test.set_value(10);
+    std::cout << "test value:" << test.get_value() << std::endl;
     return 0;
 }

@@ -80,18 +80,18 @@ int main()
     // b = 100;     //非法,无法修改
 
     //初始化表达式为数组时，auto关键字推导类型为指针。
-    int a[3] = {1, 2, 3};
-    auto b = a;
-    std::cout << "b'type:" << typeid(b).name() << std::endl
-              << "b'value:" << b << std::endl;
-    std::cout << "b[0]'type:" << typeid(b[0]).name() << std::endl
-              << "b[0]'value:" << b[0] << std::endl;
-    //若表达式为数组且auto带上&，则推导类型为数组类型。
-    auto &c = a;
-    std::cout << "c'type:" << typeid(c).name() << std::endl
-              << "c'value:" << c << std::endl;
-    std::cout << "c'type:" << typeid(c[0]).name() << std::endl
-              << "c'value:" << c[0] << std::endl;
+    // int a[3] = {1, 2, 3};
+    // auto b = a;
+    // std::cout << "b'type:" << typeid(b).name() << std::endl
+    //           << "b'value:" << b << std::endl;
+    // std::cout << "b[0]'type:" << typeid(b[0]).name() << std::endl
+    //           << "b[0]'value:" << b[0] << std::endl;
+    // //若表达式为数组且auto带上&，则推导类型为数组类型。
+    // auto &c = a;
+    // std::cout << "c'type:" << typeid(c).name() << std::endl
+    //           << "c'value:" << c << std::endl;
+    // std::cout << "c'type:" << typeid(c[0]).name() << std::endl
+    //           << "c'value:" << c[0] << std::endl;
 
     //易错写法
     // auto a = 10, b = 20, c = 30; //正确，数据类型统一，都是int型
