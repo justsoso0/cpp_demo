@@ -34,6 +34,7 @@ add_subdirectory(eg_SignalSlot)
 add_subdirectory(eg_static)
 add_subdirectory(eg_thread)
 add_subdirectory(eg_virtual)
+add_subdirectory(eg_array)
 
 
 
